@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Bolaji's Weather App</title>
+
 </head>
+
 <body>
     
-    <script>
-        async function getWeather(query) {
+    
+    <div class="content">
+
+        <div class="search">
+
+            <input type="text" class="search__field" placeholder="Enter your location.">
+            <button class="btn search__btn">
+
+                <!--
+                <svg class="search__icon">
+                    <use href="img/icons.svg#icon-magnifying-glass"></use>
+                </svg>
+                -->
+                
+                <span>Search</span>
+            </button>
+
+        </div>
+
+        <div class="locations">
+            <ul class="locations__list">
+                <li class="locations__item"></li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <div class="weather__item">Monday</div>
+            <div class="weather__item">Tuesday</div>
+            <div class="weather__item">Wednesday</div>
+            <div class="weather__item">Thursday</div>
+            <div class="weather__item">Friday</div>
+            <div class="weather__item">Saturday</div>
+            <div class="weather__item">Sunday</div>
+        </div>
+
+    </div>
+
+    <script></script>
+
+</body>
+</html>
+
+<!--
+    async function getWeather(query) {
             const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`);
 
             const data = await result.json();
@@ -16,6 +62,4 @@
         }
 
         getWeather('london');
-    </script>
-</body>
-</html>
+-->
