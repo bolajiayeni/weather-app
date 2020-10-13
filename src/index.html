@@ -17,13 +17,12 @@
         <div class="search">
 
             <input type="text" class="search__field" placeholder="Enter your location.">
+
             <button class="btn search__btn">
 
-                <!--
                 <svg class="search__icon">
-                    <use href="img/icons.svg#icon-magnifying-glass"></use>
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                 </svg>
-                -->
                 
                 <span>Search</span>
             </button>
@@ -32,7 +31,18 @@
 
         <div class="locations">
             <ul class="locations__list">
-                <li class="locations__item"></li>
+                <li class="locations__item">
+
+                    <span class="locations__result--left">
+                        <svg class="location__icon">
+                            <use xlink:href="img/sprite.svg#icon-chevron-small-right
+                            "></use>
+                        </svg>
+                    </span>
+
+                    <span class="locations__result--right"></span>
+                    
+                </li>
             </ul>
         </div>
 
