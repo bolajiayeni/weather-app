@@ -23,8 +23,7 @@
                 <svg class="search__icon">
                     <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                 </svg>
-                
-                <span>Search</span>
+            
             </button>
 
         </div>
@@ -40,14 +39,25 @@
                         </svg>
                     </span>
 
-                    <span class="locations__result--right"></span>
-                    
+                    <span class="locations__result--right">
+
+                        <span class="location__name">London</span>
+                        <span class="location__type">City</span>
+                        <span class="location__woeid">44418</span>
+                    </span>
+
                 </li>
             </ul>
         </div>
 
         <div class="weather">
-            <div class="weather__item">Monday</div>
+            <div class="weather__item">
+                <header class="weather__item--header">
+                    <p class="weather__date">10/13/2020</p>
+                    <h2 class="weather__date">Tuesday</h2>
+                </header>
+                
+            </div>
             <div class="weather__item">Tuesday</div>
             <div class="weather__item">Wednesday</div>
             <div class="weather__item">Thursday</div>
@@ -58,7 +68,17 @@
 
     </div>
 
-    <script></script>
+    <script>
+
+async function getWeather(query) {
+            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`);
+
+            const data = await result.json();
+            console.log(data);
+        }
+
+        getWeather('lon');
+    </script>
 
 </body>
 </html>
