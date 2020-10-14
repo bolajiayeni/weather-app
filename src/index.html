@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <title>Bolaji's Weather App</title>
 
 </head>
@@ -68,16 +69,8 @@
 
     </div>
 
-    <script>
+    <script>  
 
-async function getWeather(query) {
-            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`);
-
-            const data = await result.json();
-            console.log(data);
-        }
-
-        getWeather('lon');
     </script>
 
 </body>
