@@ -37,6 +37,21 @@ body {
 .search {
     display: flex;
     padding: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.search__field {
+
+}
+
+.search__btn {
+
+}
+
+.search__icon {
+    height: 2rem;
+    width: 2rem;
 }
 
 .logo-box {
