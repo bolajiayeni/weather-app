@@ -23,7 +23,6 @@ body {
     background: linear-gradient(342deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 74%, var(--gradient-color-3) 95%);
     font-family: 'Raleway', sans-serif;
     
-    
 }
 .content {
     width: 100%;
@@ -107,7 +106,7 @@ body {
     padding: 2rem;
     justify-content: center;
     font-size: 1.6rem;
-    height: 100;
+    height: 60rem;
 }
 
 .locations__list {
@@ -115,8 +114,7 @@ body {
     border: 2px solid var(--color-white);
     border-radius: .5rem;
     list-style: none;
-    width: 100%;
-    height: 100%;
+    width: 100%;  
     overflow: scroll;
 }
 
