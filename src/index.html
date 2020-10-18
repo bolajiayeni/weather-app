@@ -83,6 +83,11 @@
                 <header class="weather__item--header">
                     <p class="weather__date">10/13/2020</p>
                     <h2 class="weather__date">Tuesday</h2>
+                    <div class="weather__details">
+                        <span class="weather__temperature"></span>
+                        <span class="weather__description"></span>
+                        <span class="weather__coat"></span>
+                    </div>
                 </header>
                 
             </div>
@@ -101,13 +106,20 @@
     </div>
 
     <script>  
+        async function getWeather(query) {
+            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${query}/`);
 
+            const data = await result.json();
+            console.log(data);
+        }
+
+        getWeather('44418');
     </script>
 
 </body>
 </html>
 
-<!--
+<!--http://alloworigin.com/get?url=http://example.com
     async function getWeather(query) {
             const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`);
 
