@@ -106,14 +106,7 @@
     </div>
 
     <script>  
-        async function getWeather(query) {
-            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${query}/`);
-
-            const data = await result.json();
-            console.log(data);
-        }
-
-        getWeather('44418');
+        
     </script>
 
 </body>
@@ -128,4 +121,13 @@
         }
 
         getWeather('london');
+
+        async function getWeather(query) {
+            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${query}/`);
+
+            const data = await result.json();
+            console.log(data);
+        }
+
+        getWeather('44418');
 -->
