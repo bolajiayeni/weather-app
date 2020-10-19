@@ -182,6 +182,75 @@ body {
 .weather {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    display: flex;
+    padding: 3rem;
+}
+
+.weather__item {
+    
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 50rem;
+    width: 25rem;
+    min-width: 20rem;
+    padding: 1.5rem;
+    color: var(--color-white);
+
+    border-radius: 1rem;
+
+    border: 2px solid var(--color-white);
+    background: linear-gradient(142deg, rgba(27,138,227,1) 0%, rgba(33,150,243,1) 76%, rgba(4,161,232,1) 100%);
+    /*box-shadow: -1rem 0 1.5rem #0c7cd6; */
+    transition: .2s;
+}
+
+.weather__item:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: -1rem .5rem 1.5rem #0c85e6;
+}
+
+.weather__item:hover~.weather__item {
+    transform: translateX(5rem)
+}
+
+.weather__item:not(:first-child) {
+    margin-left: -5rem;
+}
+
+.weather__date {
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-bottom: 2rem
+}
+
+.weather__day {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.weather__temperature {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.weather__description {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.weather__umbrella {
+    align-self: center;
+    margin-top: 6rem;
+    opacity: 0;
+    font-size: 1.2rem; 
+}
+
+.weather__item:hover .weather__umbrella {
+    opacity: 1;
+    transition: all .3s ease-in;
 }
 
 .credits {
