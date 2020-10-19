@@ -250,12 +250,105 @@ body {
     font-size: 1.2rem; 
 }
 
+.weather__icon {
+    height: 18rem;
+    width: 18rem;
+
+    margin-top: 6rem;
+    margin-left: -5rem;
+}
+
+.weather__icon--balance {
+    margin-left: -2rem;
+}
+
 .weather__item:hover .weather__umbrella {
     opacity: 1;
     transition: all .3s ease-in;
 }
 
 .credits {
-    grid-row: ;
     grid-column: 1 / -1;
+
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+}
+
+.credits__left {
+    margin-right: 4rem;
+}
+
+.credits__left a:link,
+.credits__left a:visited {
+    color: var(--color-white);
+    font-weight: 400;
+    display: inline-block;
+}
+
+.credits__left a:hover, 
+.credits__left a:visited {
+    animation: hoverFloat 2s infinite;
+}
+
+.credits__right a:link,
+.credits__right a:visited {
+    color: var(--color-white);
+    display: inline-block;
+}
+
+.credits__right a:hover, 
+.credits__right a:visited {
+    animation: hoverGrow 2s infinite;
+}
+
+.credits__icon {
+    fill: var(--color-white);
+    height: 3rem;
+    width: 3rem;
+}
+
+@keyframes hoverFloat {
+
+    0% {
+        transform: translateY(0rem);
+    }
+
+    25% {
+        transform: translateY(-.5rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes hoverGrow {
+
+
+    0% {
+        transform: scale(1.3);
+    }
+
+
+    50% {
+        transform: scale(.7);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+
 }

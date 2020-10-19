@@ -1,0 +1,10 @@
+snow - snowy-6.svg
+sleet - rainy-7.svg
+hail - rainy-7.svg
+Thunderstorm - thunder.svg
+Heavy Rain - rainy-6.svg
+Light Rain - rainy-5.svg
+Showers - rainy-3.svg
+Heavy Cloud - cloudy.svg
+Light Cloud - cloudy-day-2.svg
+Clear - day.svg
