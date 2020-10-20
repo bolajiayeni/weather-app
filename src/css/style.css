@@ -311,6 +311,19 @@ body {
     width: 3rem;
 }
 
+.selected {
+    background-color: var(--color-white);
+    
+}
+
+.selected span {
+    color: var(--gradient-color-3);
+}
+
+.selected svg {
+    fill: var(--gradient-color-3);
+}
+
 @keyframes hoverFloat {
 
     0% {
