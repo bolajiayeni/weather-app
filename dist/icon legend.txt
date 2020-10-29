@@ -8,3 +8,5 @@ Showers - rainy-3.svg
 Heavy Cloud - cloudy.svg
 Light Cloud - cloudy-day-2.svg
 Clear - day.svg
+
+http://api.weatherapi.com/v1/search.json?key=${key}&q=${this.query}&days=6
