@@ -1,4 +1,6 @@
 import Search from './models/Search';
+import * as searchView from './views/searchView';
+import { domElements } from './views/base';
 
 /**
  * Global state variable
@@ -11,7 +13,8 @@ const state = {};
 const controlSearch = async () => {
 
     // 1. Get search query from the input field
-    const query = 'london'; //change this to receive query from search field
+    const query = searchView.getInput();
+    console.log(query);
 
     if (query) {
 
@@ -24,12 +27,11 @@ const controlSearch = async () => {
         await state.search.getResults(); 
 
         //5. Render the results to the UI
-        console.log(state.search.result);
-
+        searchView.renderResults(state.search.result)
     }
 }
 
-document.querySelector('.search').addEventListener('submit', e => {
+domElements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
 });
