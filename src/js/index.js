@@ -30,6 +30,7 @@ const controlSearch = async () => {
 
         //5. Render the results to the UI
         searchView.renderResults(state.search.result)
+        console.log(state.search.result.length);
     }
 }
 
