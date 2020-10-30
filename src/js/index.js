@@ -35,8 +35,6 @@ const controlSearch = async () => {
             searchView.errMsg();
         }
 
-       
-        console.log(state.search.result.length);
     }
 }
 

@@ -181,6 +181,11 @@ body {
     transform: scale(1.1);
 }
 
+.error__msg {
+    margin: 2rem;
+    text-align: center;
+    color: var(--color-white);
+}
 
 .weather {
     grid-row: 2 / 3;
