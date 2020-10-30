@@ -31,6 +31,12 @@ const renderHtml = result => {
     domElements.searchResults.insertAdjacentHTML('beforeend', markup);
 }
 
+export const clearResults = () => {
+    domElements.searchResults.innerHTML = '';
+};
+
 export const renderResults = results => {
     results.forEach(renderHtml);
-}
+};
+
+export const clearInput = () => {domElements.searchInput.value = ''};

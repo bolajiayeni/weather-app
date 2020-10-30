@@ -22,6 +22,8 @@ const controlSearch = async () => {
         state.search = new Search(query);
 
         //3. prepare UI for search results i.e show spinner and clear previous searches etc
+        searchView.clearInput();
+        searchView.clearResults();
 
         //4. send the query to the API
         await state.search.getResults(); 
