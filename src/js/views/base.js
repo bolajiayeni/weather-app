@@ -2,5 +2,23 @@
 export const domElements = {
     searchInput: document.querySelector('.search__field'),
     searchForm: document.querySelector('.search'),
-    searchResults: document.querySelector('.locations__list')
+    searchResultsList: document.querySelector('.locations__list'),
+    searchResults: document.querySelector('.locations')
 };
+
+export const elementStrings = {
+    loader: 'loading-spinner'
+}
+
+export const renderLoader = parent => {
+    const loader = `
+        <div class="${elementStrings.loader}"></div>
+    `;
+
+    parent.insertAdjacentHTML('afterbegin', loader);
+};
+
+export const clearLoader = () => {
+    const loader = document.querySelector(`.${elementStrings.loader}`);
+    if (loader) loader.parentElement.removeChild(loader);
+}

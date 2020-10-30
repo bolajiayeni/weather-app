@@ -1,6 +1,6 @@
 import Search from './models/Search';
 import * as searchView from './views/searchView';
-import { domElements } from './views/base';
+import { domElements, renderLoader, clearLoader } from './views/base';
 
 /**
  * Global state variable
@@ -24,11 +24,14 @@ const controlSearch = async () => {
         //3. prepare UI for search results i.e show spinner and clear previous searches etc
         searchView.clearInput();
         searchView.clearResults();
+        renderLoader(domElements.searchResultsList)
 
         //4. send the query to the API
         await state.search.getResults(); 
 
         //5. Render the results to the UI
+
+        clearLoader();
         if (state.search.result.length !=0) {
             searchView.renderResults(state.search.result)
         } else {

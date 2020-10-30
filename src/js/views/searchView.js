@@ -28,7 +28,7 @@ const renderHtml = result => {
 
         </li>
     `;
-    domElements.searchResults.insertAdjacentHTML('beforeend', markup);
+    domElements.searchResultsList.insertAdjacentHTML('beforeend', markup);
 }
 
 export const errMsg = () => {
@@ -39,12 +39,12 @@ export const errMsg = () => {
             </li>
         `;
     
-    domElements.searchResults.insertAdjacentHTML('beforeend', markup);
+    domElements.searchResultsList.insertAdjacentHTML('beforeend', markup);
     
 };
 
 export const clearResults = () => {
-    domElements.searchResults.innerHTML = '';
+    domElements.searchResultsList.innerHTML = '';
 };
 
 export const renderResults = results => {
