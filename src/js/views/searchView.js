@@ -31,6 +31,18 @@ const renderHtml = result => {
     domElements.searchResults.insertAdjacentHTML('beforeend', markup);
 }
 
+export const errMsg = () => {
+
+    const markup = `
+            <li class="error__msg">
+                Your search query returned no results!
+            </li>
+        `;
+    
+    domElements.searchResults.insertAdjacentHTML('beforeend', markup);
+    
+};
+
 export const clearResults = () => {
     domElements.searchResults.innerHTML = '';
 };

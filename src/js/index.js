@@ -29,7 +29,13 @@ const controlSearch = async () => {
         await state.search.getResults(); 
 
         //5. Render the results to the UI
-        searchView.renderResults(state.search.result)
+        if (state.search.result.length !=0) {
+            searchView.renderResults(state.search.result)
+        } else {
+            searchView.errMsg();
+        }
+
+       
         console.log(state.search.result.length);
     }
 }
