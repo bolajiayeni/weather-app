@@ -1,4 +1,5 @@
 import Search from './models/Search';
+import Weather from './models/Weather';
 import * as searchView from './views/searchView';
 import { domElements, renderLoader, clearLoader } from './views/base';
 
@@ -46,3 +47,16 @@ domElements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
+
+const r = new Weather(51.52, -0.11);
+r.getWeather();
+
+
+/*
+domElements.searchResultsList.addEventListener('click', e => {
+    const item = e.target.closest(`.locations__link`);
+    
+    item.preventDefault();
+    console.log('clicked');
+});
+*/
