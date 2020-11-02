@@ -16,11 +16,10 @@ export default class Weather {
             const forecast = response.data.forecast.forecastday;
             this.result = forecast;
 
-            console.log(this.result);
         } 
         
         catch (error) {
-            alert(error)
+            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev`);
         }
         
     }

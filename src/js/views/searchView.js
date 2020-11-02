@@ -10,7 +10,7 @@ const renderHtml = result => {
     const markup = `
         <li class="locations__item">
 
-            <a href="#${result.id}" class="locations__link">
+            <a href="#${result.lat},${result.lon}" class="locations__link">
                 <span class="locations__result--left">
                     <svg class="locations__icon">
                         <use xlink:href="img/sprite.svg#icon-chevron-small-right

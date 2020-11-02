@@ -7,7 +7,7 @@ import { domElements, renderLoader, clearLoader } from './views/base';
  * Global state variable
  * contains:
  * search object
- * current location object
+ * current location/weather object
  */
 const state = {};
 
@@ -34,7 +34,8 @@ const controlSearch = async () => {
 
         clearLoader();
         if (state.search.result.length !=0) {
-            searchView.renderResults(state.search.result)
+            searchView.renderResults(state.search.result);
+            console.log(state.search.result)
         } else {
             searchView.errMsg();
         }
@@ -45,12 +46,50 @@ const controlSearch = async () => {
 domElements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
+    
 });
 
 
-const r = new Weather(51.52, -0.11);
-r.getWeather();
+const controlWeather = async () => {
 
+    //get Id and then replace the # with nothing
+    let id = window.location.hash.replace('#', '');
+
+    //Split id into latitude and longitude
+    id = id.split(',');
+    const lat = id[0];
+    const lon = id[1];
+
+    console.log(id);
+    console.log(lat, lon);
+    
+    if (id) { 
+
+        //Prepare UI for changes
+        state.weather = new Weather(lat, lon);
+
+        try {
+
+            //get weather data
+            await state.weather.getWeather();
+
+            //render the recipe
+            console.log(state.weather);
+            
+        } catch (error) {
+            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev`);
+        }
+        
+
+        
+
+        
+    }
+
+    
+}
+
+['hashchange','load'].forEach(event => window.addEventListener(event, controlWeather)); //fires the control weather function when the hash is changed or the page is reloaded
 
 /*
 domElements.searchResultsList.addEventListener('click', e => {
