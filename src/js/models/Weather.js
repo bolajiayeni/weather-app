@@ -19,7 +19,7 @@ export default class Weather {
         } 
         
         catch (error) {
-            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev`);
+            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev weather`);
         }
         
     }

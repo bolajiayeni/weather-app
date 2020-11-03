@@ -4,7 +4,8 @@ export const domElements = {
     searchForm: document.querySelector('.search'),
     searchResultsList: document.querySelector('.locations__list'),
     searchResults: document.querySelector('.locations'),
-    searchItem: document.querySelector('.locations__item')
+    searchItem: document.querySelector('.locations__item'),
+    weatherResults: document.querySelector('.weather')
 };
 
 export const elementStrings = {

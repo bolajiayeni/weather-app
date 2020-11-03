@@ -1,6 +1,7 @@
 import Search from './models/Search';
 import Weather from './models/Weather';
 import * as searchView from './views/searchView';
+import * as weatherView from './views/weatherView';
 import { domElements, renderLoader, clearLoader } from './views/base';
 
 /**
@@ -55,15 +56,15 @@ const controlWeather = async () => {
     //get Id and then replace the # with nothing
     let id = window.location.hash.replace('#', '');
 
-    //Split id into latitude and longitude
-    id = id.split(',');
-    const lat = id[0];
-    const lon = id[1];
-
-    console.log(id);
-    console.log(lat, lon);
-    
     if (id) { 
+
+        //Split id into latitude and longitude
+        id = id.split(',');
+        const lat = id[0];
+        const lon = id[1];
+
+        console.log(id);
+        console.log(lat, lon);
 
         //Prepare UI for changes
         state.weather = new Weather(lat, lon);
@@ -74,15 +75,12 @@ const controlWeather = async () => {
             await state.weather.getWeather();
 
             //render the recipe
-            console.log(state.weather);
+            weatherView.renderResults(state.weather.result);
+            console.log(state.weather.result);
             
         } catch (error) {
             alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev`);
         }
-        
-
-        
-
         
     }
 
