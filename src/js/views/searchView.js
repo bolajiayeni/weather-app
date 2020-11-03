@@ -31,6 +31,15 @@ const renderHtml = result => {
     domElements.searchResultsList.insertAdjacentHTML('beforeend', markup);
 }
 
+export const highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.locations__link'));
+    resultsArr.forEach(el=> {
+        el.classList.remove('selected');
+    });
+
+    document.querySelector(`.locations__link[href*="#${id}"]`).classList.add('selected');
+}
+
 export const errMsg = () => {
 
     const markup = `

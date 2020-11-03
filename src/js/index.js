@@ -26,7 +26,7 @@ const controlSearch = async () => {
         //3. prepare UI for search results i.e show spinner and clear previous searches etc
         searchView.clearInput();
         searchView.clearResults();
-        renderLoader(domElements.searchResultsList)
+        renderLoader(domElements.searchResultsList);
 
         //4. send the query to the API
         await state.search.getResults(); 
@@ -68,6 +68,12 @@ const controlWeather = async () => {
 
         //Prepare UI for changes
         state.weather = new Weather(lat, lon);
+        weatherView.clearResults();
+        renderLoader(domElements.weatherResults);
+
+        if (state.search) {
+            searchView.highlightSelected(id);
+        }
 
         try {
 
@@ -75,6 +81,7 @@ const controlWeather = async () => {
             await state.weather.getWeather();
 
             //render the recipe
+            clearLoader();
             weatherView.renderResults(state.weather.result);
             console.log(state.weather.result);
             

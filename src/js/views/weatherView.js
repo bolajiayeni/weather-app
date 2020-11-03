@@ -90,6 +90,10 @@ const renderHtml = result => {
     domElements.weatherResults.insertAdjacentHTML('beforeend', markup);
 }
 
+export const clearResults = () => {
+    domElements.weatherResults.innerHTML = '';
+};
+
 export const renderResults = results => {
     results.forEach(renderHtml);
 };
