@@ -14,7 +14,7 @@ export default class Search {
         } //This function sends the search query to the weather api 
         
         catch (error) {
-            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev`);
+            alert(`There seems to be a problem with connecting to the API, please contact the developer on twitter: @Bojthedev search`);
         }
     }
 } 

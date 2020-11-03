@@ -5,7 +5,8 @@ export const domElements = {
     searchResultsList: document.querySelector('.locations__list'),
     searchResults: document.querySelector('.locations'),
     searchItem: document.querySelector('.locations__item'),
-    weatherResults: document.querySelector('.weather')
+    weatherResults: document.querySelector('.weather'),
+    weatherIcon: document.querySelector('.weather__icon')
 };
 
 export const elementStrings = {
