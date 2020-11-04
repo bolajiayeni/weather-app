@@ -96,11 +96,3 @@ const controlWeather = async () => {
 
 ['hashchange','load'].forEach(event => window.addEventListener(event, controlWeather)); //fires the control weather function when the hash is changed or the page is reloaded
 
-/*
-domElements.searchResultsList.addEventListener('click', e => {
-    const item = e.target.closest(`.locations__link`);
-    
-    item.preventDefault();
-    console.log('clicked');
-});
-*/
